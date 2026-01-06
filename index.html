@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirag's portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: whitesmoke;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            height: 50px;
+            margin: auto;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            margin: 0 23px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(89, 27, 148);
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 70px;
+        }
+
+        .image-top {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2f5bff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .rightsection {
+            font-size: 1.7rem;
+            margin-top: 20px;
+        }
+
+        #element {
+            color: blue;
+        }
+
+        .purple {
+            color: blue;
+        }
+
+        .rightsection .buttons {
+            padding: 50px 0;
+        }
+
+        .btn {
+            background-color: #2f5bff;
+            color: #ffffff;
+            border: none;
+            padding: 12px 40px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            margin-top: -30px;
+        }
+
+        .btn:hover {
+            background-color: #2448cc;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .buttons a {
+            text-decoration: none;
+        }
+
+        .secondsection {
+            text-align: center;
+            padding: 80px 40px;
+
+        }
+
+        .skills-title {
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: -30px;
+        }
+
+        .skills-desc {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 50px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill-card {
+            background: #ffffff;
+            padding: 35px 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .skill-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .skill-card p {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .education-section {
+            padding: 80px 40px;
+            background-color: whitesmoke;
+            text-align: center;
+        }
+
+        .edu-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: -30px;
+        }
+
+        .edu-desc {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 50px;
+        }
+
+        .edu-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .edu-card {
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            transition: 0.3s ease;
+        }
+
+        .edu-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .edu-left {
+            text-align: left;
+        }
+
+        .edu-degree {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .edu-school {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .edu-year {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2f5bff;
+        }
+
+        .footer {
+            background-color: #1f1f1f;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-second a {
+            margin: 0 12px;
+        }
+
+        .footer-second img {
+            width: 28px;
+            height: 28px;
+            filter: invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        .footer-second img:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-rights {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .footer-number {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        .contact-item img {
+            width: 18px;
+            height: 18px;
+            filter: invert(1);
+        }
+
+        .logo-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .logo-dot {
+            color: #2f5bff;
+            font-size: 2rem;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <span class="logo-name">ㅤChirag</span>
+                <span class="logo-dot"></span>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">About</a></li>
+                    <li><a href="#skills">Services</a></li>
+                    <li><a href="#education">Project</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <div class="firstsection" id="home">
+            <div class="leftsection">
+                <img class="image-top" src="self.jpg" alt="">
+            </div>
+            <div class="rightsection">
+                Hi, My name is <span class="purple">Chirag</span>
+                <div>and I am a student of</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="https://www.linkedin.com/in/chiragrewaliya030306" target="_blank">
+                        <button class="btn">Visit LinkedIn</button>
+                    </a>
+
+                    <a href="https://github.com/ChiragRewaliya336" target="_blank">
+                        <button class="btn">Visit GitHub</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section class="secondsection" id="skills">
+            <h5 class="skills-title">My Skills</h5>
+            <p class="skills-desc">
+                Here are some of the technologies and languages I’ve been working with:
+            </p>
+
+            <div class="skills-container">
+
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <p>HTML</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    <p>CSS</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+                    <p>C</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    <p>Java</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                        alt="C++">
+                    <p>C++</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <p>Git & GitHub</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="education-section" id="education">
+            <h5 class="edu-title">Education</h5>
+            <p class="edu-desc">My academic background and qualifications:</p>
+
+            <div class="edu-container">
+                <div class="edu-card">
+                    <div class="edu-left">
+                        <span class="edu-degree">B.C.A</span>
+                        <span class="edu-school">SRM University NCR</span>
+                    </div>
+                    <div class="edu-right">
+                        <span class="edu-year">2024 - 2027</span>
+                    </div>
+                </div>
+
+                <div class="edu-card">
+                    <div class="edu-left">
+                        <span class="edu-degree">12th Grade</span>
+                        <span class="edu-school">G. Sr. Sec. School — <b>86%</b></span>
+                    </div>
+                    <div class="edu-right">
+                        <span class="edu-year">2023 - 2024</span>
+                    </div>
+                </div>
+
+                <div class="edu-card">
+                    <div class="edu-left">
+                        <span class="edu-degree">10th Grade</span>
+                        <span class="edu-school">U.S.M Sr. Sec. School — <b>94.6%</b></span>
+                    </div>
+                    <div class="edu-right">
+                        <span class="edu-year">2021 - 2022</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+                strings: ['SRM UNIVERSITY,', 'B.C.A. Student,', 'Second year.'],
+                typeSpeed: 30,
+            });
+        </script>
+    </main>
+    <footer id="contact">
+        <div class="footer">
+
+            <div class="footer-second">
+
+                <a href="https://www.linkedin.com/in/chiragrewaliya030306" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+
+
+                <a href="https://github.com/ChiragRewaliya336" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
+                </a>
+
+
+                <a href="https://www.instagram.com/chintu_rewaliya_0206" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+            <div class="footer-number">
+                <div class="contact-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" alt="Phone">
+                    <span>+91-9991176141</span>
+                </div>
+
+                <div class="contact-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email">
+                    <span>chirag2006kumar@gmail.com</span>
+                </div>
+            </div>
+            <div class="footer-rights">
+                <p>© Chirag Portfolio. All rights reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
