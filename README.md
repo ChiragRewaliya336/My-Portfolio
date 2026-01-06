@@ -3,7 +3,7 @@
 This is my personal portfolio website built using HTML and CSS.  
 It highlights my skills, education, and projects.
 
-🔗 Live Website: https://chiragrewaliya336.github.io/My-Portfolio/
+🔗 Live Website: https://chiragrewaliya336.github.io/my-portfolio/
 
 ## Technologies Used
 - HTML5
