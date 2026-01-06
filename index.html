@@ -69,7 +69,7 @@
             height: 240px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid rgb(165, 155, 155);
+            border: 4px solid #3b3737;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         }
 
@@ -179,7 +179,7 @@
 
         .edu-title {
             font-size: 2.4rem;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 10px;
             margin-top: -30px;
         }
@@ -231,6 +231,64 @@
             font-size: 1rem;
             font-weight: 500;
             color: #2f5bff;
+        }
+
+        .project-section {
+            padding: 80px 40px;
+            background-color: whitesmoke;
+            text-align: center;
+            margin-top: -40px;
+        }
+
+        .project-card {
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            transition: 0.3s ease;
+        }
+
+        .project-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .project {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: -30px;
+        }
+
+        .pro-desc {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 50px;
+        }
+
+        .pro-link {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2f5bff;
+            text-decoration: none;
+        }
+
+        .pro-left {
+            text-align: left;
+        }
+
+        .pro-name {
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
         .footer {
@@ -305,9 +363,9 @@
             <div class="right">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#skills">About</a></li>
+                    <li><a href="#education">About</a></li>
                     <li><a href="#skills">Services</a></li>
-                    <li><a href="#education">Project</a></li>
+                    <li><a href="#project">Project</a></li>
                     <li><a href="#contact">Contact me</a></li>
                 </ul>
             </div>
@@ -410,7 +468,36 @@
                         <span class="edu-year">2021 - 2022</span>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="project-section" id="project">
+            <h5 class="project">Project</h5>
+            <p class="pro-desc">All projects's codes are uploads on the my github:</p>
 
+            <div class="project-container">
+                <div class="project-card">
+                    <div class="pro-left">
+                        <span class="pro-name">MY Portfolio</span>
+                    </div>
+                    <div class="pro-right">
+                        <a class="pro-link" href="https://github.com/ChiragRewaliya336?tab=repositories"
+                            target="_blank">
+                            Link
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="pro-left">
+                        <span class="pro-name">Expense tracker</span>
+                    </div>
+                    <div class="pro-right">
+                        <a class="pro-link" href="https://github.com/ChiragRewaliya336?tab=repositories"
+                            target="_blank">
+                            Link
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
