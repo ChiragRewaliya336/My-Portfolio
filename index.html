@@ -51,7 +51,13 @@
         nav ul li a:hover {
             color: rgb(89, 27, 148);
         }
-
+        .menu-btn{
+         display: none;
+         font-size: 28px;
+         background: none;
+        border: none;
+        cursor: pointer;
+        }
         .left {
             font-size: 1.5rem;
             font-weight: 600;
@@ -351,33 +357,53 @@
             font-weight: 900;
         }
         @media screen and (max-width: 768px) {
+
     nav {
-        flex-direction: column;
         height: auto;
-        padding: 15px 0;
+        padding: 15px 20px;
+        flex-wrap: wrap;
     }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .right {
+        display: none;
+        width: 100%;
+    }
+
+    .right.active {
+        display: block;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
         gap: 12px;
         margin-top: 10px;
     }
+
     nav ul li a {
         margin: 0;
     }
+
     .firstsection {
         flex-direction: column;
         text-align: center;
         margin: 30px 15px;
     }
+
     .image-top {
         width: 180px;
         height: 180px;
     }
+
     .rightsection {
         font-size: 1.2rem;
         margin-top: 25px;
     }
+
     .rightsection .buttons {
         padding: 25px 0;
         display: flex;
@@ -385,38 +411,46 @@
         gap: 15px;
         align-items: center;
     }
+
     .btn {
         width: 220px;
         padding: 12px;
         margin-top: 0;
     }
+
     .skills-container {
         grid-template-columns: 1fr;
     }
+
     .edu-card,
     .project-card {
         flex-direction: column;
         text-align: center;
         gap: 15px;
     }
+
     .edu-left,
     .pro-left {
         text-align: center;
     }
+
     .secondsection,
     .education-section,
     .project-section {
         padding: 50px 20px;
     }
+
     .skills-title,
     .edu-title,
     .project {
         font-size: 2rem;
     }
+
     .footer-number {
         flex-direction: column;
         gap: 15px;
     }
+
     .contact-item {
         justify-content: center;
     }
@@ -431,6 +465,7 @@
                 <span class="logo-name">ㅤChirag</span>
                 <span class="logo-dot"></span>
             </div>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
             <div class="right">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -618,6 +653,11 @@
 
         </div>
     </footer>
+    <script>
+function toggleMenu() {
+    document.querySelector(".right").classList.toggle("active");
+}
+</script>
 </body>
 
 </html>
